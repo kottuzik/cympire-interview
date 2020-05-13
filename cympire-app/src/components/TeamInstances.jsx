@@ -12,8 +12,6 @@ const TeamInstances = ({ teamInst }) => (
         <Step key={step.step_id} stepData={step} />
       ))}
     </div>
-    
-    
   </div>
 );
 
