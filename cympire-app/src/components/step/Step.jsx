@@ -5,7 +5,11 @@ const Step = ({ stepData }) => {
   let stepStatus = strStatus.split("_").join(" ");
 
   return(
-    <ul className="step">
+    <ul className={
+      strStatus === "done" ? "step step-done" 
+      : 
+      strStatus === "not_started" ? "step step-not-started":  "step"
+      }>
       <li>{stepData.step_name}</li>
       <li className={
           strStatus === "done" ? "step-status status-done" 

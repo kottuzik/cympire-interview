@@ -322,6 +322,13 @@ summary {
   display: none;
 }
 
+:root {
+  --blue: #2bb3e4;
+  --light-blue-shadow: #d1e5ff;
+  --status-done: #229954;
+  --status-not-started: #E74C3C;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -355,8 +362,6 @@ body {
 .team {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 4fr;
-      grid-template-columns: 1fr 4fr;
   grid-gap: 16px;
   margin-top: 16px;
   padding: 10px;
@@ -366,12 +371,33 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0px 2px 5px var(--light-blue-shadow);
           box-shadow: 0px 2px 5px var(--light-blue-shadow);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-name {
   font-size: 20px;
   font-weight: 700;
   padding-right: 16px;
+}
+
+@media (min-width: 667px) {
+  .team {
+    -ms-grid-columns: 1fr 4fr;
+        grid-template-columns: 1fr 4fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .team {
+    width: 96%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .main-container {
+    min-width: 970px;
+  }
 }
 
 .steps-wrap {
@@ -382,7 +408,7 @@ body {
   grid-gap: 12px;
 }
 
-/*step-status*/
+/*step-status, step-done, step-not-started*/
 .step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -403,6 +429,14 @@ body {
   min-height: 80px;
 }
 
+.step-done {
+  border-color: var(--status-done);
+}
+
+.step-not-started {
+  border-color: var(--status-not-started);
+}
+
 .step-status {
   font-weight: 700;
 }
@@ -413,21 +447,6 @@ body {
 
 .step-status.status-not-started {
   color: var(--status-not-started);
-}
-
-@media (min-width: 971px) {
-  .main-container {
-    min-width: 970px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-:root {
-  --blue: #2bb3e4;
-  --light-blue-shadow: #d1e5ff;
-  --status-done: #229954;
-  --status-not-started: #E74C3C;
 }
 
 /*Loader*/

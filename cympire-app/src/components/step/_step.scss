@@ -1,0 +1,26 @@
+.steps-wrap{
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+  grid-gap: 12px;
+}
+/*step-status, step-done, step-not-started*/
+.step{
+  display: flex; flex-direction: column; justify-content: space-between;
+   padding: 12px; border:1px solid #333; border-radius: 8px;
+   box-shadow: 0px 2px 5px var(--light-blue-shadow); text-align: center;
+   min-height: 80px;
+   &-done{
+     border-color: var(--status-done);
+   }
+   &-not-started{
+     border-color: var(--status-not-started);
+   }
+   &-status{
+     font-weight: 700;
+     &.status-done{
+       color: var(--status-done);
+     }
+     &.status-not-started{
+        color: var(--status-not-started);
+     }
+   }
+}
