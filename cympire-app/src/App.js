@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
   const [teamsData, setTeamsData] = useState({});
 
-  let urlDataDev = "https://cors-anywhere.herokuapp.com/";
+  let urlDataDev = "https://cors-anywhere.herokuapp.com/"; /* For development only! */
   let urlData = `${urlDataDev}https://i3gy725noe.execute-api.us-east-1.amazonaws.com/default/VisualizatorApi`;
   let xKeyValue = "9Iaq5lP41La1PWe8XMRdRTQNTZCypPJ6NbdjHxy9";
 
