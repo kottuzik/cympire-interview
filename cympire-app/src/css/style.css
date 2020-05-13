@@ -327,29 +327,90 @@ summary {
           box-sizing: border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+html {
+  font-size: 1px;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) fixed;
+}
+
+.main-container {
+  margin-top: 16px;
+  max-width: 1200px;
+  padding-bottom: 20px;
+}
+
+.main-title {
+  font-size: 28rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  color: var(--blue);
+}
+
+/*team-name*/
 .team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 16px;
+  padding: 10px;
   font-size: 18px;
+  border: 2px solid #f1f5ff;
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 5px var(--light-blue-shadow);
+          box-shadow: 0px 2px 5px var(--light-blue-shadow);
 }
 
-.step-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.team-name {
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 16px;
+}
+
+.steps-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(230px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-gap: 12px;
+}
+
+/*step-status*/
+.step {
   list-style: none;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 5px var(--light-blue-shadow);
+          box-shadow: 0px 2px 5px var(--light-blue-shadow);
+  text-align: center;
+}
+
+.step-status {
+  font-weight: 700;
+}
+
+@media (min-width: 971px) {
+  .main-container {
+    min-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 :root {
   --blue: #2bb3e4;
+  --light-blue-shadow: #d1e5ff;
 }
 
 /*Loader*/

@@ -21,8 +21,8 @@ const App = () => {
       .then(res => setTeamsData(res.data));
   }, []);
   return (
-    <div className="App">
-      <h1>{teamsData.campaign_name}</h1>
+    <main className="main-container">
+      <h1 className="main-title">{teamsData.campaign_name}</h1>
       {teamsData.team_instances ? (
         <>
           {teamsData.team_instances.map(ins => {
@@ -32,7 +32,7 @@ const App = () => {
       ) : (
         <Loader />
       )}
-    </div>
+    </main>
   );
 };
 

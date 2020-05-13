@@ -1,9 +1,9 @@
 import React from "react";
 
 const Step = ({ stepData }) => (
-  <ul className="step-list">
+  <ul className="step">
     <li>{stepData.step_name}</li>
-    <li>{stepData.status}</li>
+    <li className="step-status">{stepData.status}</li>
   </ul>
 );
 
