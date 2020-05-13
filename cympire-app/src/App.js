@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import TeamInstances from "./components/TeamInstances";
 import Loader from "./components/loader/loader";
-import './App.css';
 
 const App = () => {
   const [teamsData, setTeamsData] = useState({});
